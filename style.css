@@ -1,0 +1,162 @@
+/* Reset box model for all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #F4F4F4; /* Neutral background */
+  color: #000; /* High-contrast text */
+}
+
+/* Header styles */
+header {
+  background-color: #FF5E57; /* Vibrant Bauhaus red */
+  padding: 20px 40px;
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  border-bottom: 4px solid #333; /* Geometric line */
+}
+
+header h5 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+/* Navigation bar styles */
+nav {
+  background: #FFC857; /* Bauhaus yellow */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-bottom: 2px solid #333;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #FF5E57; /* Red background on hover */
+  color: #FFF;
+}
+
+/* Main content area styles */
+main {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Projects list styles */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.project-link {
+  background-color: #FFF;
+  padding: 20px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-link:hover {
+  background-color: #FFEBEB;
+  transform: translateY(-5px);
+}
+
+.project-link h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.project-link p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer styles */
+footer {
+  background-color: #7F9172; /* Bauhaus green */
+  padding: 15px 40px;
+  text-align: center;
+  color: #FFF;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-top: 4px solid #333; /* Geometric line */
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  nav {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  main {
+      padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  header, footer {
+      padding: 15px 20px;
+  }
+
+  nav a {
+      font-size: 1rem;
+      padding: 8px 10px;
+  }
+
+  main {
+      padding: 15px;
+  }
+}
+
+/* iframe styles */
+iframe {
+  max-width: 100%;
+  height: 500px;
+  border: none;
+}
+
+@media (max-width: 800px) {
+  iframe {
+      height: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  iframe {
+      height: 300px;
+  }
+}
